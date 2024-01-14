@@ -13,10 +13,10 @@
 %
 % The Current Maintainer of this work is Mattéo Rossillol‑‑Laruelle.
 %
-% This work consists of the files courses.cls.
+% This work consists of the file courses.cls.
 %
-% This file is largely inspired by the work of Pierre POINAS, a student at
-% ensimag from 2022 to 2025.
+% This file is largely inspired by the work of Pierre Poinas, a student at
+% ENSIMAG from 2022 to 2025.
 
 \NeedsTeXFormat{LaTeX2e}
 
@@ -101,7 +101,7 @@
 
 \newtcolorbox{definition}{
     before upper = {\tcbtitle\quad},
-    borderline west={4pt}{-5pt}{green, line cap = round},
+    borderline west = {4pt}{-5pt}{green, line cap = round},
     coltitle = black,
     detach title,
     enhanced,
@@ -112,7 +112,7 @@
 
 \newtcolorbox{method}{
     before upper = {\tcbtitle\quad},
-    borderline west={4pt}{-5pt}{blue, line cap = round},
+    borderline west = {4pt}{-5pt}{blue, line cap = round},
     coltitle = black,
     detach title,
     enhanced,
@@ -123,7 +123,7 @@
 
 \newtcolorbox{proposal}{
     before upper = {\tcbtitle\quad},
-    borderline west={4pt}{-5pt}{red, line cap = round},
+    borderline west = {4pt}{-5pt}{red, line cap = round},
     coltitle = black,
     detach title,
     enhanced,
@@ -132,11 +132,11 @@
     title = \underline{Proposition :}
 }
 
-%% `*example`
+%% `*example` `tcolorbox`es
 
 \newtcolorbox{dexample}[1]{
     before upper = {\tcbtitle\quad},
-    borderline west={4pt}{-5pt}{black, line cap = round},
+    borderline west = {4pt}{-5pt}{black, line cap = round},
     coltitle = black,
     detach title,
     enhanced,
@@ -157,7 +157,7 @@
     enhanced,
     fonttitle = \bfseries,
     frame hidden,
-    title=\underline{Exemple :}
+    title = \underline{Exemple :}
 }
 
 % Other package setups
