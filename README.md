@@ -2,7 +2,7 @@
 
 ## What is this ?
 
-This repository contains the LaTeX class I (**Mattéo ROSSILLOL--LARUELLE**) during my years at **ENSIMAG** **from 2023 to 2026**.
+This repository contains the LaTeX class I (**Mattéo ROSSILLOL--LARUELLE**) am using during my years at **ENSIMAG** **from 2023 to 2026**.
 
 This class needs [**XeLaTeX**](https://xetex.sourceforge.net/) to be used.
 
