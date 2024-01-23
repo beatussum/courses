@@ -42,17 +42,19 @@
 
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage[most]{tcolorbox}
+\RequirePackage{titlesec}
 \RequirePackage[svgnames, table]{xcolor}
 
 % Additionnal packages
 
 \RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
-\RequirePackage{forest} % for tree
+\RequirePackage{mathtools}
 \RequirePackage{multicol}
 \RequirePackage{nicefrac}
 \RequirePackage[arrowdel]{physics}
 \RequirePackage{siunitx} % for SI units
-\RequirePackage{tikz} % for automata
+\RequirePackage{stmaryrd}
+\RequirePackage{tikz} % for drawing
 
 %% AMS packages
 
@@ -186,8 +188,6 @@
     table-auto-round,
     uncertainty-mode = separate
 }
-
-\usetikzlibrary{automata, arrows.meta, positioning, shapes}
 
 % General setup
 
