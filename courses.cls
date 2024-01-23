@@ -20,9 +20,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 
-\ProvidesClass{courses}[
-    ROSSILLOL--LARUELLE Mattéo's LaTeX class for courses at ENSIMAG
-]
+\ProvidesClass{courses}[My LaTeX class for courses at ENSIMAG]
 
 \LoadClass[a4paper]{article}
 
