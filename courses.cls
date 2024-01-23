@@ -64,12 +64,6 @@
 \RequirePackage{fontspec}
 \RequirePackage[math-style = french, bold-style = ISO]{unicode-math}
 
-% New commands
-
-\newcommand{\mydef}[1]{\textcolor{red}{#1}}
-\newcommand{\myimp}[1]{\textcolor{teal}{#1}}
-\newcommand{\xor}{\oplus}
-
 % Some command overrides
 
 \renewcommand{\maketitle}{
@@ -81,9 +75,9 @@
     \fancyhead[R]{ENSIMAG 1A}
 
     \begin{center}
-        \color{Navy} \fontsize{35pt}{12pt} \textbf{\@title} \\
-        \vspace{10pt}
-        \color{Black} \fontsize{18pt}{12pt} \textbf{\@author}
+\color{Navy} \fontsize{35pt}{12pt} \textbf{\@title} \\
+\vspace{10pt}
+\color{Black} \fontsize{18pt}{12pt} \textbf{\@author}
     \end{center}
 
     \makeatother
@@ -92,54 +86,76 @@
 %% Section headers
 
 \renewcommand{\thesection}{\Roman{section}}
-\renewcommand{\thesubsection}{Cours \arabic{subsection}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\alph{subsubsection}}
+
+% New commands
+
+\newcommand{\mydef}[1]{\textcolor{red}{#1}}
+\newcommand{\myimp}[1]{\textcolor{teal}{#1}}
+
+\newcommand{\newday}[1]{Début du cours du \textcolor{teal}{\DTMdate{#1}}.}
+
+%% Bitwise operators
+
+\newcommand{\notb}{\overline}
+\newcommand{\xor}{\oplus}
+
+\newcommand{\xnor}{\notb{\oplus}}
+\newcommand{\nand}{\notb{\cdot}}
+\newcommand{\nor}{\notb{+}}
+
+% `mathtools`
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\iinterval}{\llbracket}{\rrbracket}
 
 % Some `tcolorbox` definitions
 
-\newtcolorbox{definition}{
+\tcbset{
     before upper = {\tcbtitle\quad},
-    borderline west = {4pt}{-5pt}{green, line cap = round},
     coltitle = black,
     detach title,
     enhanced,
     fonttitle = \bfseries,
-    frame hidden,
+    frame hidden
+}
+
+\newtcolorbox{corollary}{
+    borderline west = {4pt}{-5pt}{purple, line cap = round},
+    title = \underline{Corollaire :}
+}
+
+\newtcolorbox{definition}{
+    borderline west = {4pt}{-5pt}{red, line cap = round},
     title = \underline{Définition :}
 }
 
 \newtcolorbox{method}{
-    before upper = {\tcbtitle\quad},
     borderline west = {4pt}{-5pt}{blue, line cap = round},
-    coltitle = black,
-    detach title,
-    enhanced,
-    fonttitle = \bfseries,
-    frame hidden,
     title = \underline{Méthode :}
 }
 
 \newtcolorbox{proposal}{
-    before upper = {\tcbtitle\quad},
-    borderline west = {4pt}{-5pt}{red, line cap = round},
-    coltitle = black,
-    detach title,
-    enhanced,
-    fonttitle = \bfseries,
-    frame hidden,
+    borderline west = {4pt}{-5pt}{green, line cap = round},
     title = \underline{Proposition :}
+}
+
+\newtcolorbox{remark}{
+    borderline west = {4pt}{-5pt}{orange, line cap = round},
+    title = \underline{Remarque :}
+}
+
+\newtcolorbox{theorem}{
+    borderline west = {4pt}{-5pt}{magenta, line cap = round},
+    title = \underline{Théorème :}
 }
 
 %% `*example` `tcolorbox`es
 
 \newtcolorbox{dexample}[1]{
-    before upper = {\tcbtitle\quad},
     borderline west = {4pt}{-5pt}{black, line cap = round},
-    coltitle = black,
-    detach title,
-    enhanced,
-    fonttitle = \bfseries,
-    frame hidden,
     lefthand ratio = #1,
     sidebyside,
     sidebyside align = top seam,
@@ -147,18 +163,13 @@
 }
 
 \newtcolorbox{example}{
-    before upper = {\tcbtitle\quad},
     borderline west = {4pt}{-5pt}{black, line cap = round},
-    breakable,
-    coltitle = black,
-    detach title,
-    enhanced,
-    fonttitle = \bfseries,
-    frame hidden,
     title = \underline{Exemple :}
 }
 
 % Other package setups
+
+\setlist[itemize]{label = \bullet}
 
 \sisetup{
     locale = FR,
