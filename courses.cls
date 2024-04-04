@@ -97,8 +97,8 @@
 
 % New commands
 
-\newcommand{\mydef}[1]{\textcolor{red}{#1}}
-\newcommand{\myimp}[1]{\textcolor{teal}{#1}}
+\newcommand{\mydef}[1]{\textcolor{red}{\text{#1}}}
+\newcommand{\myimp}[1]{\textcolor{teal}{\text{#1}}}
 
 \newcommand{\newday}[1]{Début du cours du \textcolor{teal}{\DTMdate{#1}}.}
 
