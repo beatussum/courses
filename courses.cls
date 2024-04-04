@@ -102,6 +102,8 @@
 
 \newcommand{\newday}[1]{Début du cours du \textcolor{teal}{\DTMdate{#1}}.}
 
+\newcommand{\myand}{\text{ et }}
+
 %% Bitwise operators
 
 \newcommand{\notb}{\overline}
