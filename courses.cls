@@ -57,6 +57,7 @@
 
 \RequirePackage{amsmath}
 \RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
+\RequirePackage{listing}
 \RequirePackage{multicol}
 \RequirePackage{nicefrac}
 \RequirePackage[arrowdel]{physics}
@@ -174,6 +175,26 @@
 % Other package setups
 
 \setlist[itemize]{label = \bullet}
+
+\lstset{
+    commentstyle = \color{teal},
+    keywordstyle = \color{magenta},
+    numberstyle = \tiny\color{gray},
+    stringstyle = \color{purple},
+    basicstyle = \tiny,
+    breakatwhitespace = false,
+    breaklines = true,
+    captionpos = b,
+    extendedchars = true,
+    keepspaces = true,
+    numbers = left,
+    numbersep = 5pt,
+    showspaces = false,
+    showstringspaces = false,
+    showtabs = false,
+    tabsize = 4,
+    xleftmargin = 0.5cm
+}
 
 \sisetup{
     locale = FR,
