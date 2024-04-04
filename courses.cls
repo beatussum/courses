@@ -24,6 +24,14 @@
 
 \LoadClass[a4paper]{article}
 
+% Font configuration
+
+\RequirePackage{fontspec}
+\RequirePackage{mathtools} % need to be loaded before `unicode-math`
+\RequirePackage[math-style = french, bold-style = ISO]{unicode-math}
+
+\setmathfont{NewCMMath-Regular.otf}
+
 % Main packages
 
 \RequirePackage[french, strings = unicode]{babel} % localization
@@ -48,7 +56,6 @@
 % Additionnal packages
 
 \RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
-\RequirePackage{mathtools}
 \RequirePackage{multicol}
 \RequirePackage{nicefrac}
 \RequirePackage[arrowdel]{physics}
@@ -60,11 +67,6 @@
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
-
-% Font configuration
-
-\RequirePackage{fontspec}
-\RequirePackage[math-style = french, bold-style = ISO]{unicode-math}
 
 % Some command overrides
 
