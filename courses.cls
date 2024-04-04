@@ -140,6 +140,11 @@
     title = \underline{Définition :}
 }
 
+\newtcolorbox{lemma}{
+    borderline west = {4pt}{-5pt}{purple, line cap = round},
+    title = \underline{Lemme :}
+}
+
 \newtcolorbox{method}{
     borderline west = {4pt}{-5pt}{blue, line cap = round},
     title = \underline{Méthode :}
