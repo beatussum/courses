@@ -51,6 +51,7 @@
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{titlesec}
+\RequirePackage{tocloft} % for spacing in TOC
 \RequirePackage[svgnames, table]{xcolor}
 
 % Additionnal packages
@@ -214,4 +215,5 @@
 
 % General setup
 
+\cftsetindents{section}{1em}{3em}
 \author{ROSSILLOL‑‑LARUELLE Mattéo}
