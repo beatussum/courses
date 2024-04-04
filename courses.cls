@@ -55,6 +55,7 @@
 
 % Additionnal packages
 
+\RequirePackage{amsmath}
 \RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
 \RequirePackage{multicol}
 \RequirePackage{nicefrac}
@@ -62,11 +63,6 @@
 \RequirePackage{siunitx} % for SI units
 \RequirePackage{stmaryrd}
 \RequirePackage{tikz} % for drawing
-
-%% AMS packages
-
-\RequirePackage{amsmath}
-\RequirePackage{amssymb}
 
 % Some command overrides
 
