@@ -85,6 +85,10 @@
     \end{center}
 
     \makeatother
+
+    \newpage
+    \tableofcontents
+    \newpage
 }
 
 %% Section headers
