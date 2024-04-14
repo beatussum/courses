@@ -78,7 +78,7 @@
     \makeatletter
 
     \pagestyle{fancy}
-    \fancyhead[L]{R.--L. Mattéo}
+    \fancyhead[L]{Mattéo R.--L.}
     \fancyhead[C]{\@title}
     \fancyhead[R]{ENSIMAG 1A}
 
@@ -251,4 +251,4 @@
 % General setup
 
 \cftsetindents{section}{1em}{3em}
-\author{ROSSILLOL‑‑LARUELLE Mattéo}
+\author{Mattéo ROSSILLOL‑‑LARUELLE}
