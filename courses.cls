@@ -68,6 +68,7 @@
 \RequirePackage[arrowdel]{physics}
 \RequirePackage{siunitx} % for SI units
 \RequirePackage{stmaryrd}
+\RequirePackage{svg}
 \RequirePackage{tikz} % for drawing
 
 % Some command overrides
