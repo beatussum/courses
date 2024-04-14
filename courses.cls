@@ -26,8 +26,13 @@
 
 % Font configuration
 
+%% need to be loaded before `unicode-math`
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+
 \RequirePackage{fontspec}
-\RequirePackage{mathtools} % need to be loaded before `unicode-math`
 \RequirePackage[math-style = french, bold-style = ISO]{unicode-math}
 
 \setmathfont{NewCMMath-Regular.otf}
@@ -56,7 +61,6 @@
 
 % Additionnal packages
 
-\RequirePackage{amsmath}
 \RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
 \RequirePackage{listing}
 \RequirePackage{multicol}
