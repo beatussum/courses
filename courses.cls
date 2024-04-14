@@ -69,6 +69,7 @@
 \RequirePackage{siunitx} % for SI units
 \RequirePackage{stmaryrd}
 \RequirePackage{svg}
+\RequirePackage{tabularx}
 \RequirePackage{tikz} % for drawing
 
 % Some command overrides
@@ -126,53 +127,94 @@
 
 % Some `tcolorbox` definitions
 
+%% Styles
+
 \tcbset{
-    before upper = {\tcbtitle\quad},
-    coltitle = black,
-    detach title,
-    enhanced,
-    fonttitle = \bfseries,
-    frame hidden
+    box/.style = {
+        before upper = {\tcbtitle\quad},
+        coltitle = black,
+        detach title,
+        enhanced,
+        fonttitle = \bfseries,
+        frame hidden
+    }
 }
 
+\tcbset{
+    tab/.style = {
+        enhanced,
+        fonttitle = \bfseries,
+        fontupper = \normalsize\sffamily,
+        colback = white!10!white,
+        colframe = red!50!black,
+        colbacktitle = Salmon!40!white,
+        coltitle = black,
+        center title
+    }
+}
+
+%% Environments
+
+\newtcolorbox{mytabular}[2]{
+    tab,
+    tabularx* = {\renewcommand{\arraystretch}{1.5}}{#1},
+    #2
+}
+
+%%% `box`es
+
 \newtcolorbox{corollary}{
-    borderline west = {4pt}{-5pt}{purple, line cap = round},
+    box,
+    borderline west = {4pt}{-X||Y|Y|Y|Y||Y5pt}{purple, line cap = round},
     title = \underline{Corollaire :}
 }
 
 \newtcolorbox{definition}{
+    box,
     borderline west = {4pt}{-5pt}{red, line cap = round},
     title = \underline{Définition :}
 }
 
 \newtcolorbox{lemma}{
+    box,
     borderline west = {4pt}{-5pt}{purple, line cap = round},
     title = \underline{Lemme :}
 }
 
 \newtcolorbox{method}{
+    box,
     borderline west = {4pt}{-5pt}{blue, line cap = round},
     title = \underline{Méthode :}
 }
 
 \newtcolorbox{proposal}{
+    box,
     borderline west = {4pt}{-5pt}{green, line cap = round},
     title = \underline{Proposition :}
 }
 
 \newtcolorbox{remark}{
+    box,
     borderline west = {4pt}{-5pt}{orange, line cap = round},
     title = \underline{Remarque :}
 }
 
+\newtcolorbox{reminder}{
+    box,
+    borderline west = {4pt}{-5pt}{orange, line cap = round},
+    title = \underline{Rappel :}
+}
+
 \newtcolorbox{theorem}{
+    box,
     borderline west = {4pt}{-5pt}{magenta, line cap = round},
     title = \underline{Théorème :}
 }
 
-%% `*example` `tcolorbox`es
+%%%% `*example` `tcolorbox`es
 
 \newtcolorbox{dexample}[1]{
+    box,
     borderline west = {4pt}{-5pt}{black, line cap = round},
     lefthand ratio = #1,
     sidebyside,
@@ -181,6 +223,7 @@
 }
 
 \newtcolorbox{example}{
+    box,
     borderline west = {4pt}{-5pt}{black, line cap = round},
     title = \underline{Exemple :}
 }
