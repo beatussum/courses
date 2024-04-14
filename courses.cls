@@ -120,6 +120,11 @@
 \newcommand{\nand}{\notb{\cdot}}
 \newcommand{\nor}{\notb{+}}
 
+% `amsmath`
+
+\DeclareMathOperator{\naturalset}{\mathbb{N}}
+\DeclareMathOperator{\realset}{\mathbb{R}}
+
 % `mathtools`
 
 \DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
