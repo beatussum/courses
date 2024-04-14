@@ -109,6 +109,7 @@
 \newcommand{\newday}[1]{Début du cours du \textcolor{teal}{\DTMdate{#1}}.}
 
 \newcommand{\myand}{\text{ et }}
+\newcommand{\myor}{\text{ ou }}
 
 %% Bitwise operators
 
