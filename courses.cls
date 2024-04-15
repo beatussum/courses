@@ -62,7 +62,6 @@
 % Additionnal packages
 
 \RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
-\RequirePackage{minted}
 \RequirePackage{multicol}
 \RequirePackage{nicefrac}
 \RequirePackage[arrowdel]{physics}
