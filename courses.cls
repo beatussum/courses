@@ -170,7 +170,7 @@
 
 \newtcolorbox{corollary}{
     box,
-    borderline west = {4pt}{-X||Y|Y|Y|Y||Y5pt}{purple, line cap = round},
+    borderline west = {4pt}{-5pt}{purple, line cap = round},
     title = \underline{Corollaire :}
 }
 
