@@ -28,7 +28,6 @@
 
 %% need to be loaded before `unicode-math`
 
-\RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{mathtools}
 
