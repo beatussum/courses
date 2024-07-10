@@ -148,7 +148,7 @@
     tab/.style = {
         enhanced,
         fonttitle = \bfseries,
-        fontupper = \normalsize\sffamily,
+        fontupper = \normalsize \sffamily,
         colback = white!10!white,
         colframe = red!50!black,
         colbacktitle = Salmon!40!white,
