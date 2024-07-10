@@ -209,6 +209,12 @@
     title = \underline{Rappel :}
 }
 
+\newtcolorbox{syntax}{
+    box,
+    borderline west = {4pt}{-5pt}{OrangeRed, line cap = round},
+    title = \underline{Point syntaxique :}
+}
+
 \newtcolorbox{theorem}{
     box,
     borderline west = {4pt}{-5pt}{magenta, line cap = round},
