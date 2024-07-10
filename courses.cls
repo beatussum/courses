@@ -135,9 +135,9 @@
 
 \tcbset{
     box/.style = {
-        before upper = {\tcbtitle\quad},
+        colback = blue!5,
+        colbacktitle = blue!10,
         coltitle = black,
-        detach title,
         enhanced,
         fonttitle = \bfseries,
         frame hidden
