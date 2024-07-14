@@ -45,8 +45,8 @@
 \RequirePackage{mathtools}
 \RequirePackage{nicefrac}
 \RequirePackage[arrowdel]{physics}
-\RequirePackage{siunitx} % for SI units
-\RequirePackage{stmaryrd}
+\RequirePackage{siunitx}
+\RequirePackage{stmaryrd} % for some math operators
 
 %% Main packages
 
@@ -312,5 +312,5 @@
 
 % General setup
 
-\cftsetindents{section}{1em}{3em}
+\cftsetindents{section}{1em}{3em} % increase spacing for sections in toc
 \author{Mattéo ROSSILLOL‑{}‑LARUELLE}
