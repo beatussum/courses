@@ -150,6 +150,14 @@
 %% Styles
 
 \tcbset{
+    new/counted/.style = {
+        auto counter,
+        number within = subsubsection,
+        number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+    }
+}
+
+\tcbset{
     box/.style = {
         colback = blue!5,
         colbacktitle = blue!10,
@@ -183,108 +191,76 @@
 
 %%% `box`es
 
-\newtcolorbox[
-    auto counter,
-    number within = subsubsection,
-    number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+\newtcbtheorem[
+    counted,
     crefname = {corollaire}{corollaires}
-]{corollary}[1][]{
+]{corollary}{Corollaire}{
     box,
-    borderline west = {4pt}{-5pt}{purple, line cap = round},
-    title = \underline{Corollaire~\thetcbcounter :},
-    #1
-}
+    borderline west = {4pt}{-5pt}{purple, line cap = round}
+}{clry}
 
-\newtcolorbox[
-    auto counter,
-    number within = subsubsection,
-    number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+\newtcbtheorem[
+    counted,
     crefname = {définition}{définitions}
-]{definition}[1][]{
+]{definition}{Définition}{
     box,
-    borderline west = {4pt}{-5pt}{red, line cap = round},
-    title = \underline{Définition~\thetcbcounter :},
-    #1
-}
+    borderline west = {4pt}{-5pt}{red, line cap = round}
+}{def}
 
-\newtcolorbox[
-    auto counter,
-    number within = subsubsection,
-    number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+\newtcbtheorem[
+    counted,
     crefname = {lemme}{lemmes}
-]{lemma}[1][]{
+]{lemma}{Lemme}{
     box,
-    borderline west = {4pt}{-5pt}{purple, line cap = round},
-    title = \underline{Lemme~\thetcbcounter :},
-    #1
-}
+    borderline west = {4pt}{-5pt}{purple, line cap = round}
+}{lem}
 
-\newtcolorbox[
-    auto counter,
-    number within = subsubsection,
-    number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+\newtcbtheorem[
+    counted,
     crefname = {méthode}{méthodes}
-]{method}[1][]{
+]{method}{Méthode}{
     box,
-    borderline west = {4pt}{-5pt}{blue, line cap = round},
-    title = \underline{Méthode~\thetcbcounter :},
-    #1
-}
+    borderline west = {4pt}{-5pt}{blue, line cap = round}
+}{meth}
 
-\newtcolorbox[
-    auto counter,
-    number within = subsubsection,
-    number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+\newtcbtheorem[
+    counted,
     crefname = {proposition}{propositions}
-]{proposal}[1][]{
+]{proposal}{Proposition}{
     box,
-    borderline west = {4pt}{-5pt}{green, line cap = round},
-    title = \underline{Proposition~\thetcbcounter :},
-    #1
-}
+    borderline west = {4pt}{-5pt}{green, line cap = round}
+}{prop}
 
-\newtcolorbox[
-    auto counter,
-    number within = subsubsection,
-    number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+\newtcbtheorem[
+    counted,
     crefname = {remarque}{remarques}
-]{remark}[1][]{
+]{remark}{Remarque}{
     box,
-    borderline west = {4pt}{-5pt}{orange, line cap = round},
-    title = \underline{Remarque~\thetcbcounter :},
-    #1
-}
+    borderline west = {4pt}{-5pt}{orange, line cap = round}
+}{rmk}
 
 \newtcolorbox{reminder}[1][]{
     box,
     borderline west = {4pt}{-5pt}{orange, line cap = round},
-    title = \underline{Rappel~\thetcbcounter :},
+    title = \underline{Rappel :},
     #1
 }
 
-\newtcolorbox[
-    auto counter,
-    number within = subsubsection,
-    number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+\newtcbtheorem[
+    counted,
     crefname = {point syntaxique}{points syntaxiques}
-]{syntax}[1][]{
+]{syntax}{Point syntaxique}{
     box,
-    borderline west = {4pt}{-5pt}{OrangeRed, line cap = round},
-    title = \underline{Point syntaxique~\thetcbcounter :},
-    #1
-}
+    borderline west = {4pt}{-5pt}{OrangeRed, line cap = round}
+}{stx}
 
-\newtcolorbox[
-    auto counter,
-    number within = subsubsection,
-    number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+\newtcbtheorem[
+    counted,
     crefname = {théorèmes}{théorèmes}
-]{theorem}[1][]{
+]{theorem}{Théorème}{
     box,
-    borderline west = {4pt}{-5pt}{magenta, line cap = round},
-    title = \underline{Théorème~\thetcbcounter :},
-    #1
-}
+    borderline west = {4pt}{-5pt}{magenta, line cap = round}
+}{the}
 
 %%%% `*example` `tcolorbox`es
 
@@ -294,14 +270,14 @@
     lefthand ratio = #2,
     sidebyside,
     sidebyside align = top seam,
-    title = \underline{Exemple~\thetcbcounter :},
+    title = {Exemple :},
     #1
 }
 
 \newtcolorbox{example}[1][]{
     box,
     borderline west = {4pt}{-5pt}{black, line cap = round},
-    title = \underline{Exemple~\thetcbcounter :},
+    title = {Exemple :},
     #1
 }
 
