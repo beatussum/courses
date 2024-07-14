@@ -109,6 +109,15 @@
 
 \renewcommand{\arraystretch}{1.5}
 
+%% Patch cleveref
+
+%%% See https://tex.stackexchange.com/a/670393.
+
+\makeatletter
+\patchcmd\@cref{\begingroup}{\begingroup\@safe@activestrue}{}{\fail}
+\patchcmd\@cref{\cref@isstackfull{\@refsubstack}}{\cref@isstackfull{\@refsubstack}\@safe@activesfalse}{}{\fail}
+\makeatother
+
 %% Section headers
 
 \renewcommand{\thesection}{\Roman{section}}
