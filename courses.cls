@@ -107,6 +107,8 @@
     \newpage
 }
 
+\renewcommand{\arraystretch}{1.5}
+
 %% Section headers
 
 \renewcommand{\thesection}{\Roman{section}}
@@ -175,7 +177,7 @@
 
 \newtcolorbox{mytabular}[2]{
     tab,
-    tabularx* = {\renewcommand{\arraystretch}{1.5}}{#1},
+    tabularx = {#1},
     #2
 }
 
