@@ -39,6 +39,15 @@
 \RequirePackage[useregional]{datetime2} % better date formatting
 \RequirePackage{icomma} % fix comma space
 
+%% Packages for maths and physics
+
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+\RequirePackage{nicefrac}
+\RequirePackage[arrowdel]{physics}
+\RequirePackage{siunitx} % for SI units
+\RequirePackage{stmaryrd}
+
 %% Main packages
 
 \RequirePackage{fancyhdr} % better header
@@ -52,6 +61,7 @@
 ]{geometry}
 
 \RequirePackage[hidelinks]{hyperref}
+\RequirePackage{cleveref}
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{titlesec}
 \RequirePackage{tocloft} % for spacing in TOC
@@ -61,15 +71,6 @@
 \RequirePackage{multicol}
 \RequirePackage{multirow}
 \RequirePackage{tabularx}
-
-%% Packages for maths and physics
-
-\RequirePackage{amssymb}
-\RequirePackage{mathtools}
-\RequirePackage{nicefrac}
-\RequirePackage[arrowdel]{physics}
-\RequirePackage{siunitx} % for SI units
-\RequirePackage{stmaryrd}
 
 %% Drawing packages
 
