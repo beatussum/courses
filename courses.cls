@@ -173,7 +173,8 @@
         coltitle = black,
         enhanced,
         fonttitle = \bfseries,
-        frame hidden
+        frame hidden,
+        separator sign dash
     }
 }
 
