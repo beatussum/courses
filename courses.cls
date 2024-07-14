@@ -24,25 +24,23 @@
 
 \LoadClass[a4paper]{article}
 
-% Font configuration
+% Packages
 
-%% need to be loaded before `unicode-math`
+%% Font configuration
 
-\RequirePackage{amssymb}
-\RequirePackage{mathtools}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
 
-\RequirePackage{fontspec}
-\RequirePackage[math-style = french, bold-style = ISO]{unicode-math}
+%% i18n packages
 
-\setmathfont{NewCMMath-Regular.otf}
-
-% Main packages
-
-\RequirePackage[french, strings = unicode]{babel} % localization
+\RequirePackage[french, strings = unicode]{babel}
 \RequirePackage{csquotes} % for `\enquote` command
 \RequirePackage[useregional]{datetime2} % better date formatting
-\RequirePackage{fancyhdr} % better header
 \RequirePackage{icomma} % fix comma space
+
+%% Main packages
+
+\RequirePackage{fancyhdr} % better header
 
 \RequirePackage[
     top = 2cm,
@@ -56,19 +54,30 @@
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{titlesec}
 \RequirePackage{tocloft} % for spacing in TOC
-\RequirePackage[svgnames, table]{xcolor}
 
-% Additionnal packages
+%% `tabular` packages
 
-\RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
 \RequirePackage{multicol}
+\RequirePackage{tabularx}
+
+%% Packages for maths and physics
+
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
 \RequirePackage{nicefrac}
 \RequirePackage[arrowdel]{physics}
 \RequirePackage{siunitx} % for SI units
 \RequirePackage{stmaryrd}
+
+%% Drawing packages
+
 \RequirePackage{svg}
-\RequirePackage{tabularx}
-\RequirePackage{tikz} % for drawing
+\RequirePackage{tikz}
+\RequirePackage[svgnames, table]{xcolor}
+
+%% Additionnal packages
+
+\RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
 
 % Some command overrides
 
@@ -240,7 +249,7 @@
 
 % Other package setups
 
-\setlist[itemize]{label = \bullet}
+\setlist[itemize]{label = \( \bullet \)}
 
 \sisetup{
     locale = FR,
