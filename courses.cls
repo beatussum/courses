@@ -84,7 +84,7 @@
 
 % Some command overrides
 
-\AtBeginDocument{\RenewCommandCopy\qty\SI}
+\AtBeginDocument{\RenewCommandCopy\qty\SI} % conflict with `physics`
 
 \renewcommand{\maketitle}{
     \makeatletter
