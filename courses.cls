@@ -34,6 +34,7 @@
 %% i18n packages
 
 \RequirePackage[french, strings = unicode]{babel}
+\RequirePackage{fvextra} % needed to be loaded before `csquotes`
 \RequirePackage{csquotes} % for `\enquote` command
 \RequirePackage[useregional]{datetime2} % better date formatting
 \RequirePackage{icomma} % fix comma space
@@ -80,6 +81,8 @@
 \RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
 
 % Some command overrides
+
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
 
 \renewcommand{\maketitle}{
     \makeatletter
