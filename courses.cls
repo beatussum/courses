@@ -59,6 +59,7 @@
 %% `tabular` packages
 
 \RequirePackage{multicol}
+\RequirePackage{multirow}
 \RequirePackage{tabularx}
 
 %% Packages for maths and physics
