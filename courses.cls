@@ -91,7 +91,7 @@
     \pagestyle{fancy}
     \fancyhead[L]{Mattéo R.-{}-L.}
     \fancyhead[C]{\@title}
-    \fancyhead[R]{ENSIMAG 1A}
+    \fancyhead[R]{ENSIMAG 2A --- ISI}
 
     \begin{center}
 \color{Navy} \fontsize{35pt}{12pt} \textbf{\@title} \\
