@@ -33,7 +33,7 @@
 
 %% i18n packages
 
-\RequirePackage[french, strings = unicode]{babel}
+\RequirePackage[french]{babel}
 \RequirePackage{fvextra} % needed to be loaded before `csquotes`
 \RequirePackage{csquotes} % for `\enquote` command
 \RequirePackage[useregional]{datetime2} % better date formatting
