@@ -61,7 +61,7 @@
 ]{geometry}
 
 \RequirePackage[hidelinks]{hyperref}
-\RequirePackage{cleveref}
+\RequirePackage[french]{cleveref}
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{titlesec}
 \RequirePackage{tocloft} % for spacing in TOC
