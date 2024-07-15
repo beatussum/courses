@@ -280,14 +280,14 @@
     lefthand ratio = #2,
     sidebyside,
     sidebyside align = top seam,
-    title = {Exemple :},
+    title = {Exemple},
     #1
 }
 
 \newtcolorbox{example}[1][]{
     box,
     borderline west = {4pt}{-5pt}{black, line cap = round},
-    title = {Exemple :},
+    title = {Exemple},
     #1
 }
 
