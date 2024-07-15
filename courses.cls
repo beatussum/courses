@@ -170,24 +170,25 @@
     box/.style = {
         colback = blue!5,
         colbacktitle = blue!10,
-        coltitle = black,
+        coltitle = black!80,
         enhanced,
         fonttitle = \bfseries,
         frame hidden,
-        separator sign dash
+        separator sign dash,
+        attach boxed title to top left = {xshift = 3mm, yshift = -1mm}
     }
 }
 
 \tcbset{
     tab/.style = {
+        center title,
+        colback = white!10!white,
+        colbacktitle = Salmon!40!white,
+        colframe = red!50!black,
+        coltitle = black,
         enhanced,
         fonttitle = \bfseries,
-        fontupper = \normalsize \sffamily,
-        colback = white!10!white,
-        colframe = red!50!black,
-        colbacktitle = Salmon!40!white,
-        coltitle = black,
-        center title
+        fontupper = \normalsize \sffamily
     }
 }
 
@@ -206,7 +207,7 @@
     crefname = {corollaire}{corollaires}
 ]{corollary}{Corollaire}{
     box,
-    borderline west = {4pt}{-5pt}{purple, line cap = round}
+    borderline west = {4pt}{-5pt}{Fuchsia, line cap = round}
 }{clry}
 
 \newtcbtheorem[
@@ -246,7 +247,7 @@
     crefname = {remarque}{remarques}
 ]{remark}{Remarque}{
     box,
-    borderline west = {4pt}{-5pt}{orange, line cap = round}
+    borderline west = {4pt}{-5pt}{DarkOrange, line cap = round}
 }{rmk}
 
 \newtcolorbox{reminder}[1][]{
