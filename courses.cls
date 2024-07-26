@@ -158,11 +158,28 @@
 
 %% Styles
 
+\makeatletter
+
+\newcommand{\@section}[1]{%
+    \ifnum\value{#1}>0%
+        .\csname the#1\endcsname%
+    \fi%
+}
+
+\newcommand{\tcbpath}{%
+    \thesection%
+    \@section{subsection}%
+    \@section{subsubsection}%
+    -\arabic{\tcbcounter}%
+}
+
+\makeatother
+
 \tcbset{
     new/counted/.style = {
         auto counter,
         number within = subsubsection,
-        number freestyle = {\noexpand\thesection.\noexpand\thesubsection.\noexpand\thesubsubsection-\noexpand\arabic{\tcbcounter}},
+        number freestyle = {\noexpand\tcbpath}
     }
 }
 
