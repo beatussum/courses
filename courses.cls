@@ -154,6 +154,10 @@
 \DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
 \DeclarePairedDelimiter{\iinterval}{\llbracket}{\rrbracket}
 
+% `tabularx`
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
 % Some `tcolorbox` definitions
 
 %% Styles
