@@ -22,6 +22,17 @@
 
 \ProvidesClass{courses}[My LaTeX class for courses at ENSIMAG]
 
+\newif\if@drawing
+\DeclareOption{drawing}{\@drawingtrue}
+
+\newif\if@minted
+\DeclareOption{minted}{\@mintedtrue}
+
+\newif\if@physics
+\DeclareOption{physics}{\@physicstrue}
+
+\ProcessOptions
+
 \LoadClass[a4paper]{article}
 
 % Packages
@@ -44,8 +55,6 @@
 \RequirePackage{amssymb}
 \RequirePackage{mathtools}
 \RequirePackage{nicefrac}
-\RequirePackage[arrowdel]{physics}
-\RequirePackage{siunitx}
 \RequirePackage{stmaryrd} % for some math operators
 
 %% Main packages
@@ -65,6 +74,7 @@
 \RequirePackage[most]{tcolorbox}
 \RequirePackage{titlesec}
 \RequirePackage{tocloft} % for spacing in TOC
+\RequirePackage[svgnames, table]{xcolor}
 
 %% `tabular` packages
 
@@ -72,19 +82,48 @@
 \RequirePackage{multirow}
 \RequirePackage{tabularx}
 
-%% Drawing packages
-
-\RequirePackage{svg}
-\RequirePackage{tikz}
-\RequirePackage[svgnames, table]{xcolor}
-
 %% Additionnal packages
 
 \RequirePackage{enumitem} % better `enumerate`, `itemize`, etc.
 
-% Some command overrides
+%% Conditionnal packages
 
-\AtBeginDocument{\RenewCommandCopy\qty\SI} % conflict with `physics`
+\if@drawing
+    \RequirePackage{svg}
+    \RequirePackage{tikz}
+\fi
+
+\if@minted
+    \RequirePackage{minted}
+
+    % See https://tex.stackexchange.com/a/289068.
+    \AtBeginEnvironment{minted}{\renewcommand{\fcolorbox}[4][]{#4}}
+\fi
+
+\if@physics
+    \RequirePackage[arrowdel]{physics}
+    \RequirePackage{siunitx}
+
+    \AtBeginDocument{\RenewCommandCopy\qty\SI} % conflict with `physics`
+
+    \sisetup{
+        locale = FR,
+        group-digits = integer,
+        group-minimum-digits = 3,
+        input-complex-root,
+        list-units = single,
+        per-mode = power-positive-first,
+        range-units = single,
+        retain-explicit-plus,
+        separate-uncertainty,
+        separate-uncertainty-units = single,
+        table-alignment-mode = format,
+        table-auto-round,
+        uncertainty-mode = separate
+    }
+\fi
+
+% Some command overrides
 
 \renewcommand{\maketitle}{
     \makeatletter
@@ -316,22 +355,6 @@
 % Other package setups
 
 \setlist[itemize]{label = \( \bullet \)}
-
-\sisetup{
-    locale = FR,
-    group-digits = integer,
-    group-minimum-digits = 3,
-    input-complex-root,
-    list-units = single,
-    per-mode = power-positive-first,
-    range-units = single,
-    retain-explicit-plus,
-    separate-uncertainty,
-    separate-uncertainty-units = single,
-    table-alignment-mode = format,
-    table-auto-round,
-    uncertainty-mode = separate
-}
 
 % General setup
 
