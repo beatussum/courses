@@ -75,6 +75,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{tocloft} % for spacing in TOC
 \RequirePackage[svgnames, table]{xcolor}
+\RequirePackage{xspace}
 
 %% `tabular` packages
 
