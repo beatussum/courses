@@ -44,9 +44,9 @@
 
 %% i18n packages
 
-\RequirePackage[french]{babel}
+\RequirePackage[french, english]{babel}
 \RequirePackage{fvextra} % needed to be loaded before `csquotes`
-\RequirePackage{csquotes} % for `\enquote` command
+\RequirePackage[autostyle = true]{csquotes} % for `\enquote` command
 \RequirePackage[useregional]{datetime2} % better date formatting
 \RequirePackage{icomma} % fix comma space
 
@@ -126,6 +126,8 @@
 % Some command overrides
 
 \renewcommand{\maketitle}{
+    \selectlanguage{french}
+
     \makeatletter
 
     \pagestyle{fancy}
