@@ -165,22 +165,22 @@
 
 % New commands
 
-\newcommand{\mydef}[1]{\textcolor{red}{\text{#1}}}
-\newcommand{\myimp}[1]{\textcolor{teal}{\text{#1}}}
+\newcommand{\textdef}[1]{\textcolor{red}{\text{#1}}}
+\newcommand{\textimp}[1]{\textcolor{teal}{\text{#1}}}
 
-\newcommand{\newday}[1]{Début du cours du \textcolor{teal}{\DTMdate{#1}}.}
+\newcommand{\newday}[1]{Début du cours du \textimp{\DTMdate{#1}}.}
 
-\newcommand{\myand}{\text{ et }}
-\newcommand{\myor}{\text{ ou }}
+\newcommand{\mathand}{\text{ et }}
+\newcommand{\mathor}{\text{ ou }}
 
 %% Bitwise operators
 
-\newcommand{\notb}{\overline}
-\newcommand{\xor}{\oplus}
+\newcommand{\mathnot}{\overline}
+\newcommand{\mathxor}{\oplus}
 
-\newcommand{\xnor}{\notb{\oplus}}
-\newcommand{\nand}{\notb{\cdot}}
-\newcommand{\nor}{\notb{+}}
+\newcommand{\mathxnor}{\notb{\oplus}}
+\newcommand{\mathnand}{\notb{\cdot}}
+\newcommand{\mathnor}{\notb{+}}
 
 % `amsmath`
 
