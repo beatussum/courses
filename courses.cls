@@ -77,6 +77,12 @@
 \RequirePackage[svgnames, table]{xcolor}
 \RequirePackage{xspace}
 
+\RequirePackage[
+    type = CC,
+    modifier = by-sa,
+    version = 4.0
+]{doclicense} % need to be loaded after hyperref
+
 %% `tabular` packages
 
 \RequirePackage{multicol}
@@ -143,6 +149,9 @@
     \end{center}
 
     \makeatother
+
+    \vspace{\fill}
+    \foreignlanguage{english}{\doclicenseThis}
 
     \newpage
     \tableofcontents
