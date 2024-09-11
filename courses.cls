@@ -254,7 +254,7 @@
 
 %% Environments
 
-\newtcolorbox{mytabular}[2]{
+\newtcolorbox{tcbtabular}[2]{
     tab,
     tabularx = {#1},
     #2
