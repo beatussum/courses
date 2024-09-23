@@ -301,7 +301,7 @@
 \newtcolorbox{reminder}[1][]{
     box,
     borderline west = {4pt}{-5pt}{orange, line cap = round},
-    title = \underline{Rappel :},
+    title = Rappel,
     #1
 }
 
