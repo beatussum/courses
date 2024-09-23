@@ -28,9 +28,6 @@
 \newif\if@minted
 \DeclareOption{minted}{\@mintedtrue}
 
-\newif\if@physics
-\DeclareOption{physics}{\@physicstrue}
-
 \ProcessOptions
 
 \LoadClass[a4paper]{article}
@@ -55,6 +52,8 @@
 \RequirePackage{amssymb}
 \RequirePackage{mathtools}
 \RequirePackage{nicefrac}
+\RequirePackage[arrowdel]{physics}
+\RequirePackage{siunitx}
 \RequirePackage{stmaryrd} % for some math operators
 
 %% Main packages
@@ -105,29 +104,6 @@
 
     % See https://tex.stackexchange.com/a/289068.
     \AtBeginEnvironment{minted}{\renewcommand{\fcolorbox}[4][]{#4}}
-\fi
-
-\if@physics
-    \RequirePackage[arrowdel]{physics}
-    \RequirePackage{siunitx}
-
-    \AtBeginDocument{\RenewCommandCopy\qty\SI} % conflict with `physics`
-
-    \sisetup{
-        locale = FR,
-        group-digits = integer,
-        group-minimum-digits = 3,
-        input-complex-root,
-        list-units = single,
-        per-mode = power-positive-first,
-        range-units = single,
-        retain-explicit-plus,
-        separate-uncertainty,
-        separate-uncertainty-units = single,
-        table-alignment-mode = format,
-        table-auto-round,
-        uncertainty-mode = separate
-    }
 \fi
 
 % Some command overrides
@@ -367,6 +343,22 @@
 % Other package setups
 
 \setlist[itemize]{label = \( \bullet \)}
+
+\sisetup{
+    locale = FR,
+    group-digits = integer,
+    group-minimum-digits = 3,
+    input-complex-root,
+    list-units = single,
+    per-mode = power-positive-first,
+    range-units = single,
+    retain-explicit-plus,
+    separate-uncertainty,
+    separate-uncertainty-units = single,
+    table-alignment-mode = format,
+    table-auto-round,
+    uncertainty-mode = separate
+}
 
 % General setup
 
