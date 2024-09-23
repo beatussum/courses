@@ -363,4 +363,4 @@
 % General setup
 
 \cftsetindents{section}{1em}{3em} % increase spacing for sections in toc
-\author{Mattéo ROSSILLOL‑{}‑LARUELLE}
+\author{Mattéo ROSSILLOL-{}-LARUELLE}
