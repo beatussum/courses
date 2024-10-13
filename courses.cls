@@ -172,6 +172,7 @@
 
 % `amsmath`
 
+\DeclareMathOperator{\integerset}{\mathbb{Z}}
 \DeclareMathOperator{\naturalset}{\mathbb{N}}
 \DeclareMathOperator{\realset}{\mathbb{R}}
 
