@@ -217,7 +217,6 @@
 
 \tcbset{
     box/.style = {
-        breakable,
         colback = blue!5,
         colbacktitle = blue!10,
         coltitle = black!80,
@@ -231,7 +230,6 @@
 
 \tcbset{
     tab/.style = {
-        breakable,
         center title,
         colback = white!10!white,
         colbacktitle = Salmon!40!white,
